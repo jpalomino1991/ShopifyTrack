@@ -73,7 +73,7 @@ namespace ShopifyTrack.Controllers
                 foreach (Item item in detail.Items)
                 {
                     KellyChild product = _context.KellyChild.FromSqlInterpolated($"GetProductChildInfo @CodigoPadre = {item.sku}").ToList()[0];
-                    item.name = $"{item.title}{(product.Talla != "00" ? " Talla - " + product.Talla : "")}{(product.Taco != "00" ? " Taco - " + product.Taco : "")}";
+                    item.name = $"{item.title}{(product.Talla != "00" ? " - Talla " + product.Talla : "")}{(product.Taco != "00" ? " - Taco " + product.Taco : "")}";
                 }
 
                 detail.Ship = _context.ShipAddress.Where(c => c.order_id == order.id).FirstOrDefault();
