@@ -1,89 +1,107 @@
-.hide{
+.hide {
 	display: none !important;
 }
+
 nav.navbar.navbar-expand-sm.flex-md-nowrap.navbar-dark.bg-dark.sticky-top {
-    background-color: #ffffff !important;
-    box-shadow: 0px 1px 3px #00000040;
+	background-color: #ffffff !important;
+	box-shadow: 0px 1px 3px #00000040;
 }
-.txtcolor_kellys, .btn_goToKellys, .nav-link{
+
+.txtcolor_kellys, .btn_goToKellys, .nav-link {
 	color: #f7a32d !important;
 }
-.btn_goToKellys:hover{
-	color: #ffffff !important;
-}
+
+	.btn_goToKellys:hover {
+		color: #ffffff !important;
+	}
+
 .bgcolor_kellys,
-.btn-outline-secondary:hover{
+.btn-outline-secondary:hover {
 	background-color: #f7a32d !important;
 }
-.bordercolor_kellys{
+
+.bordercolor_kellys {
 	border-color: #f7a32d !important;
 }
+
 .form-group {
 	margin-bottom: 15px;
 }
-.align-right{
+
+.align-right {
 	float: right;
 }
-.container_seguimiento{
+
+.container_seguimiento {
 	margin-top: 20px;
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
 	.text-lg-right {
-    	text-align: right;
+		text-align: right;
 	}
 }
-.lblCard{
+
+.lblCard {
 	color: #999;
 }
-.statusPointer{
+
+.statusPointer {
 	width: 45px;
-    height: 45px;
-    border-radius: 22.5px;
-    border: 5px solid #fff;
-    box-shadow: 0px 2px 5px #0000005c;
-    position: absolute;
-    top: -15px;
-    left: 0%;
-    transition: all 0.75s;
+	height: 45px;
+	border-radius: 22.5px;
+	border: 5px solid #fff;
+	box-shadow: 0px 2px 5px #0000005c;
+	position: absolute;
+	top: -15px;
+	left: 0%;
+	transition: all 0.75s;
 }
-.statusPointer:before{
-    content: '';
-    background-image: url(../img/bag.svg);
-    background-size: 20px;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 35px;
-    height: 33px;
-    z-index: 10;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
+
+	.statusPointer:before {
+		content: '';
+		background-image: url(../img/bag.svg);
+		background-size: 20px;
+		background-repeat: no-repeat;
+		background-position: center;
+		width: 35px;
+		height: 33px;
+		z-index: 10;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
 .fechaInfo,
-.horaInfo{
+.horaInfo {
 	color: #999;
 }
-.active .lblInfo{
+
+.active .lblInfo {
 	font-weight: bold;
 }
-.barra{
+
+.barra {
 	position: relative;
 	margin-top: 40px;
 	margin-bottom: 20px;
 }
-.containerStatus{
+
+.containerStatus {
 	margin-bottom: 30px;
 	position: relative;
 }
-.progress-bar{
+
+.progress-bar {
 	transition: all 0.6s;
 }
+
 .containerStatus td {
-    margin-bottom: 15px;
-    display: block;
+	margin-bottom: 15px;
+	display: block;
 }
-.container_head_detail{
+
+.container_head_detail {
 	background-image: url(../img/icon_tracking.svg);
 	background-size: 76px 76px;
 	background-repeat: no-repeat;
@@ -91,68 +109,92 @@ nav.navbar.navbar-expand-sm.flex-md-nowrap.navbar-dark.bg-dark.sticky-top {
 }
 
 /*optimzisaciones*/
-@media all and (max-width: 1200px){
-	.statusInfoPickUp  span.statusPedido {
-	    font-size: 80%;
-	    max-width: 20% ;
+@media all and (max-width: 1200px) {
+	.statusInfoPickUp span.statusPedido {
+		font-size: 80%;
+		max-width: 20%;
 	}
 }
 
-@media all and (max-width: 767px){
+@media all and (max-width: 767px) {
 	.barra {
-	    width: 50%;
-	    display: inline-block;
-	    vertical-align: top;
-	    position: absolute;
-        left: -70px;
-    	top: 10px;
+		width: 50%;
+		display: inline-block;
+		vertical-align: top;
+		position: absolute;
+		left: -70px;
+		top: 10px;
 	}
-	.barra .progress {
-	    transform: rotate(90deg) translateX(90px);
-	    overflow: initial;
+
+		.barra .progress {
+			transform: rotate(90deg) translateX(90px) scale(0.95);
+			overflow: initial;
+		}
+
+		.barra.barraPickUp {
+			left: -185px;
+			top: 102px;
+		}
+
+	.card .table {
+		transform: translateY(25px);
 	}
-	.statusPointer:before{
-	    transform: rotate(-90deg);
-	    width: 33px;
-    	height: 35px;
+
+	.statusPointer:before {
+		transform: rotate(-90deg);
+		width: 33px;
+		height: 35px;
 	}
+
 	.statusInfo.row {
-	    width: 65%;
-	    float: right;
+		width: 65%;
+		float: right;
 	}
+
 	.statusInfoShipping,
-	.statusInfoPickUp  {
-        width: 50%;
-	    max-width: 50%;
-	    flex: initial;
-	    font-size: 100%;
-	    display: inline-block;
-	    float: right;
-	    margin-right: 20px;
-	}
-	.statusInfoPickUp  span.statusPedido{
+	.statusInfoPickUp {
+		width: 50%;
+		max-width: 50%;
+		flex: initial;
 		font-size: 100%;
-		width: 100%;
+		display: inline-block;
+		float: right;
+		margin-right: 20px;
 	}
+
+		.statusInfoPickUp span.statusPedido {
+			font-size: 100%;
+			width: 100%;
+		}
+
 	.statusPedido {
 		width: 100%;
 		flex: initial;
 	}
-	.container_seguimiento h2{
+
+	.container_seguimiento h2 {
 		font-size: calc(1.325rem + .25vw);
 	}
-	.container_head_detail span{
+
+	.container_head_detail span {
 		display: block;
 	}
 }
-@media all and (max-width: 355px){
+
+@media all and (max-width: 355px) {
 	.barra {
-        left: -125px;
-    	top: 10px;
+		left: -125px;
+		top: 10px;
 	}
+
+		.barra.barraPickUp {
+			left: -210px;
+			top: 102px;
+		}
+
 	.statusInfoShipping, .statusInfoPickUp {
-    	width: 65%;
-    	max-width: 65%;
+		width: 65%;
+		max-width: 65%;
 	}
 }
 
@@ -165,6 +207,7 @@ nav.navbar.navbar-expand-sm.flex-md-nowrap.navbar-dark.bg-dark.sticky-top {
 		display: contents;
 	}
 }
+
 a[href="http://somee.com"] {
 	display: none;
 }
