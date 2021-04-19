@@ -151,14 +151,17 @@
                             <tr>
                                 <td>
                                     <h4>Información de despacho</h4>
-                                    <div id="direccionDespacho" class="row">
-                                        <div class="col-md-4">
-                                            <span class="lblCard">Dirección de despacho</span>
+                                    @if (Model.Order.tipoEnvio != "Recojo en Tienda")
+                                    {
+                                        <div id="direccionDespacho" class="row">
+                                            <div class="col-md-4">
+                                                <span class="lblCard">Dirección de despacho</span>
+                                            </div>
+                                            <div class="col-md-8 text-lg-right">
+                                                <span class="direccionDespacho">@Model.Ship.address1, @Model.Ship.city</span>
+                                            </div>
                                         </div>
-                                        <div class="col-md-8 text-lg-right">
-                                            <span class="direccionDespacho">@Model.Ship.address1, @Model.Ship.city</span>
-                                        </div>
-                                    </div>
+                                    }
                                     <div id="fechaEntrega" class="row">
                                         <div class="col-md-4">
                                             <span class="lblCard">Fecha de entrega</span>
